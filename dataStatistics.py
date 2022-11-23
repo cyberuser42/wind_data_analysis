@@ -1,7 +1,8 @@
 import numpy as np
 def dataStatistics(data, statistic, zref=0, yref=0, dx=0):
+    result = 0
     if statistic == "mean":
-        result = np.mean(data, axis=2) # axis 2 svarende til x
+        result = np.mean(data, axis=2)
     if statistic == "variance":
         result = np.var(data, axis=2) 
     if statistic == "cross-correlation":

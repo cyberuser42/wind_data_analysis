@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 from dataStatistics import *
 import numpy as np
 
-def dataPlot(data, stat):
+def dataPlot(data, stat, zref=0, yref=0, dx=0):
     ax = plt.subplot()
-    #plotting
-    data_plot = dataStatistics(data, statistic=stat)
-    #data_plot = data[12,:,:] 
+    data_plot = dataStatistics(data, statistic=stat, zref=zref, yref=yref, dx=dx)
     z = np.arange(np.size(data_plot[1,:]))
     y = np.arange(np.size(data_plot[:,1]))
     z,y = np.meshgrid(z,y)
